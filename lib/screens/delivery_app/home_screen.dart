@@ -1,5 +1,5 @@
-import 'package:delivery_app/screens/dashboard_screen.dart';
-import 'package:delivery_app/screens/profile_screen.dart';
+import 'package:delivery_app/screens/delivery_app/dashboard_screen.dart';
+import 'package:delivery_app/screens/delivery_app/profile_screen.dart';
 import 'package:flutter/material.dart';
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

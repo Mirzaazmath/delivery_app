@@ -1,4 +1,5 @@
-import 'package:delivery_app/screens/splash_screen.dart';
+import 'package:delivery_app/screens/order_status/order_status_screen.dart';
+import 'package:delivery_app/screens/delivery_app/splash_screen.dart';
 import 'package:flutter/material.dart';
 void  main(){
   runApp(MyApp());
@@ -13,8 +14,10 @@ class MyApp extends StatelessWidget {
       title: "Delivery App",
       theme: ThemeData(
         primaryColor: const Color(0xffd3e4ff),
+
       ),
-      home:const  SplashScreen(),
+      home:OrderStatusScreen(),
+      //const  SplashScreen(),
 
     );
   }

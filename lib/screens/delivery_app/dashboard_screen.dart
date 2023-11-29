@@ -1,7 +1,7 @@
-import 'package:delivery_app/screens/order_screen.dart';
+import 'package:delivery_app/screens/delivery_app/order_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../components/text_component.dart';
+import '../../components/text_component.dart';
 class DashBoardScreen extends StatelessWidget {
   const DashBoardScreen({super.key});
 
