@@ -10,7 +10,7 @@ Widget getStatusCard(String id,context){
         return  Stack(
             children: [
               SizedBox(
-                height: 150,
+
                 child: Column(
                   children: [
                     Container(
@@ -24,10 +24,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 150,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,9 +38,9 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order pending",color: const Color(0xff0861a5),size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "Your order is not complete",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order pending",color: const Color(0xff001C37),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "Your order is not complete",color:const Color(0xff001C37)),
                                 ],
                               ),
                             ),
@@ -52,39 +52,42 @@ Widget getStatusCard(String id,context){
                             )
                           ],
                         ),
-                        Divider(
-                          color: Colors.grey.shade300,
-                          thickness: 1,
+                        const Divider(
+                          height: 32,
+                          color: Color(0xffC3C6CF)
+
                         ),
-                        TextUtil(text: "We haven't received your payment",color:const Color(0xff0861a5),size: 13,),
-                        const  SizedBox(height: 15,),
+                        DescriptionText(text: "We haven't received your payment",color:const Color(0xff001C37)),
+                        const  SizedBox(height: 16,),
                         Row(
                           children: [
                             GestureDetector(
                               onTap:(){},
                               child: Container(
-                                height: 30,
-                                width: 120,
+                                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 24),
+                                height: 40,
+                                width: 141,
                                 //width: double.infinity,
                                 decoration: BoxDecoration(
                                     border: Border.all(color: Colors.grey),
                                     borderRadius: BorderRadius.circular(20)
                                 ),
                                 alignment: Alignment.center,
-                                child: TextUtil(text: "cancel order",color:const  Color(0xff0861a5),size: 15,),
+                                child: DescriptionText(text: "cancel order",color:const  Color(0xff0961A4)),
                               ),
                             ),
                             const SizedBox(width: 20,),
                             Expanded(
                               child: Container(
-                                height: 30,
-                                width: double.infinity,
+                                height: 40,
+                                width: 199,
+                                padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 24),
                                 decoration: BoxDecoration(
-                                    color:const Color(0xff0960a3),
+                                    color:const Color(0xff0961A4),
                                     borderRadius: BorderRadius.circular(20)
                                 ),
                                 alignment: Alignment.center,
-                                child: TextUtil(text: "Retry payment",color: Colors.white,size: 15,),
+                                child: DescriptionText(text: "Retry payment",color: Colors.white,),
                               ),
                             )
                           ],
@@ -105,7 +108,7 @@ Widget getStatusCard(String id,context){
         return Stack(
             children: [
               SizedBox(
-                height: 70,
+
                 child: Column(
                   children: [
                     Container(
@@ -119,10 +122,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 70,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -133,9 +136,10 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order placed",color: const Color(0xff0861a5),size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "We'll review and confirm your order",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order placed",color: const Color(0xff001C37),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "We'll review and confirm your order",color:const Color(0xff001C37)),
+
                                 ],
                               ),
                             ),
@@ -161,7 +165,7 @@ Widget getStatusCard(String id,context){
         return Stack(
             children: [
               SizedBox(
-                height: 70,
+
                 child: Column(
                   children: [
                     Container(
@@ -175,10 +179,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 70,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -189,9 +193,10 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order confirmed",color: const Color(0xff0861a5),size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "We'll notify when your order is ready",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order Confirm",color: const Color(0xff001C37),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "We’ll notify when your order is ready",color:const Color(0xff001C37)),
+
                                 ],
                               ),
                             ),
@@ -214,10 +219,10 @@ Widget getStatusCard(String id,context){
       }
     ///////// Order ready ///////////////
       case "4": {
-        return Stack(
+        return  Stack(
             children: [
               SizedBox(
-                height: 70,
+
                 child: Column(
                   children: [
                     Container(
@@ -231,10 +236,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 70,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -245,9 +250,10 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order ready",color: const Color(0xff0861a5),size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "We'll notify when driver is allocated",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order ready",color: const Color(0xff001C37),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "We’ll review and confirm your order",color:const Color(0xff001C37)),
+
                                 ],
                               ),
                             ),
@@ -273,7 +279,7 @@ Widget getStatusCard(String id,context){
         return Stack(
             children: [
               SizedBox(
-                height: 70,
+
                 child: Column(
                   children: [
                     Container(
@@ -287,10 +293,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 70,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -301,9 +307,10 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Driver allocated",color: const Color(0xff0861a5),size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "We'll notify when driver is out for delivery",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Driver allocated",color: const Color(0xff001C37),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "We’ll review and confirm your order",color:const Color(0xff001C37)),
+
                                 ],
                               ),
                             ),
@@ -335,7 +342,7 @@ Widget getStatusCard(String id,context){
                   children: [
                     Container(
                         height: 270,
-                       decoration: BoxDecoration(
+                       decoration:const  BoxDecoration(
                          image: DecorationImage(
                            image: AssetImage("assets/map.jpeg"),fit: BoxFit.fill
                          )
@@ -348,10 +355,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 130,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -362,24 +369,25 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Out for delivery",color: Colors.brown,size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "Your order is on the way",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Out for delivery",color:const  Color(0xff845400),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  TextUtil(text: "Your order is on the way",color:const Color(0xff001C37),size: 13,),
                                 ],
                               ),
                             ),
-                            const Icon(Icons.share_location,size: 40,color: Colors.brown,)
+                            const Icon(Icons.share_location,size: 40,color: Color(0xff845400),)
                           ],
                         ),
-                        Divider(
-                          color: Colors.grey.shade300,
-                          thickness: 1,
+                       const  Divider(
+                          height: 32,
+                          color: Color(0xffC3C6CF),
+
                         ),
                         const SizedBox(height: 10,),
                         GestureDetector(
                           onTap:(){},
                           child: Container(
-                            height: 30,
+                           padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 20),
                             width: double.infinity,
                             //width: double.infinity,
                             decoration: BoxDecoration(
@@ -387,7 +395,7 @@ Widget getStatusCard(String id,context){
                                 borderRadius: BorderRadius.circular(20)
                             ),
                             alignment: Alignment.center,
-                            child: TextUtil(text: "Call driver",color:const  Color(0xff0861a5),size: 15,),
+                            child: DescriptionText(text: "Call driver",color:const  Color(0xff0961A4)),
                           ),
                         ),
 
@@ -408,7 +416,7 @@ Widget getStatusCard(String id,context){
         return Stack(
             children: [
               SizedBox(
-                height: 150,
+
                 child: Column(
                   children: [
                     Container(
@@ -422,10 +430,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 130,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -436,24 +444,25 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order delivered",color: Colors.green,size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "Your order is delivered to you",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order delivered",color:const  Color(0xff098915),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "Your order is delivered to you",color:const Color(0xff001C37)),
                                 ],
                               ),
                             ),
                             const Icon(Icons.done,size: 40,color: Colors.green,)
                           ],
                         ),
-                        Divider(
-                          color: Colors.grey.shade300,
-                          thickness: 1,
+                       const  Divider(
+                          height: 32,
+                          color: Color(0xffC3C6CF),
+
                         ),
                         const SizedBox(height: 10,),
                         GestureDetector(
                           onTap:(){},
                           child: Container(
-                            height: 30,
+                          padding:const  EdgeInsets.symmetric(vertical: 10,horizontal: 24),
                             width: double.infinity,
                             //width: double.infinity,
                             decoration: BoxDecoration(
@@ -461,7 +470,7 @@ Widget getStatusCard(String id,context){
                                 borderRadius: BorderRadius.circular(20)
                             ),
                             alignment: Alignment.center,
-                            child: TextUtil(text: "Download Invoice",color:const  Color(0xff0861a5),size: 15,),
+                            child: DescriptionText(text: "Download Invoice",color:const  Color(0xff0961A4)),
                           ),
                         ),
 
@@ -482,7 +491,7 @@ Widget getStatusCard(String id,context){
         return Stack(
             children: [
               SizedBox(
-                height: 150,
+
                 child: Column(
                   children: [
                     Container(
@@ -496,10 +505,10 @@ Widget getStatusCard(String id,context){
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child:  Card(
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Container(
-                    padding: const EdgeInsets.all(10),
-                    height: 120,
+                    padding: const EdgeInsets.all(16),
+
                     width: double.infinity,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -510,21 +519,22 @@ Widget getStatusCard(String id,context){
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  TextUtil(text: "Order cancelled",color: Colors.red,size: 20,),
-                                  const SizedBox(height: 5,),
-                                  TextUtil(text: "Your order is cancelled ",color:const Color(0xff0861a5),size: 13,),
+                                  TextUtil(text: "Order cancelled",color:const  Color(0xffBA1A1A),size: 24,),
+                                  const SizedBox(height: 4,),
+                                  DescriptionText(text: "Your order is cancelled ",color:const Color(0xff001C37),),
                                 ],
                               ),
                             ),
-                            const Icon(Icons.close,size: 40,color: Colors.red,)
+                            const Icon(Icons.close,size: 40,color: Color(0xffBA1A1A),)
                           ],
                         ),
-                        Divider(
-                          color: Colors.grey.shade300,
-                          thickness: 1,
+                       const  Divider(
+                          height: 32,
+                          color: Color(0xffC3C6CF),
+
                         ),
-                        const SizedBox(height: 10,),
-                        TextUtil(text: "Refund Initiated",color:const  Color(0xff0861a5),size: 15,),
+
+                        DescriptionText(text: "Refund Initiated",color:const  Color(0xff001C37)),
 
 
 

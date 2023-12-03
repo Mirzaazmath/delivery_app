@@ -74,22 +74,23 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
             getStatusCard(selectedMenu,context),
 
              Padding(
-               padding:const EdgeInsets.all(15),
+               padding:const EdgeInsets.symmetric(horizontal: 16),
             child:Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextUtil(text: "Delivery info",size: 18,weight: true,),
-                const SizedBox(height: 15,),
-                TextUtil(text: "Delivery Location",size: 14,weight: true,),
-                const SizedBox(height: 5,),
-                const  Text("Apollo Hospital Gachibowli,#123,Street,Main,Cross,Karnataka,Bengaluru,India"),
-                const SizedBox(height: 15,),
-                TextUtil(text: "Delivery Slot",size: 14,weight: true,),
-                const SizedBox(height: 5,),
-                const  Text("15 Sep 2023 - Between 12pm to 3pm"),
-                const SizedBox(height: 15,),
-                TextUtil(text: "Order Summary",size: 18,weight: true,),
-                const SizedBox(height: 15,),
+                const SizedBox(height: 24,),
+                TitleText(text: "Delivery info",),
+                const SizedBox(height: 16,),
+                DescriptionText(text: "Delivery Location",),
+                const SizedBox(height: 8,),
+                  DescriptionText(text: "Apollo Hospital Gachibowli,#123,Street,Main,Cross,Karnataka,Bengaluru,India",),
+                const SizedBox(height: 16,),
+                DescriptionText(text: "Delivery Slot",color: Colors.black,),
+                const SizedBox(height: 8,),
+                  DescriptionText(text: "15 Sep 2023 - Between 12pm to 3pm"),
+                const SizedBox(height: 24,),
+                TitleText(text: "Order Summary",),
+                const SizedBox(height: 16,),
                 ListView.builder(
                     shrinkWrap: true,
                     physics:const  NeverScrollableScrollPhysics(),
@@ -97,80 +98,90 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                     itemBuilder: (context,index){
                       return GestureDetector(
 
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 4),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
-                          children: [
-                            TextUtil(text: "Item x $index",size: 15,),
-                            TextUtil(text: "Rs.1200",size: 13,),
-                          ],
+                            children: [
+                              DescriptionText(text: "Item x $index",color:const  Color(0xff1A1C1E),),
+
+                              DescriptionText(text: "Rs.1200",),
+                            ],
+                          ),
                         ),
                       );
 
                     }),
-               const  Divider(color: Colors.grey,),
+               const  Divider(
+                 height: 32,
+                 color: Color(0xffC3C6CF),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Item Total",size: 15,),
-                    TextUtil(text: "Rs.10,2300",size: 13,),
+                    DescriptionText(text: "Item Total",color:const  Color(0xff1A1C1E)),
+                    DescriptionText(text: "Rs.10,2300"),
                   ],
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 8,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Delivery fee",size: 15,),
-                    TextUtil(text: "Rs.1200",size: 13,),
+                    DescriptionText(text: "Delivery fee",color:const  Color(0xff1A1C1E)),
+                    DescriptionText(text: "Rs.1200",),
                   ],
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 8,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Gst on delivery fee",size: 15,),
-                    TextUtil(text: "Rs.1200",size: 13,),
+                    DescriptionText(text: "Gst on delivery fee",color:const  Color(0xff1A1C1E)),
+                    DescriptionText(text: "Rs.1200",color:const  Color(0xff1A1C1E),),
                   ],
                 ), const SizedBox(height: 5,),
-                TextUtil(text: "18%",size: 15,color: Colors.grey,),
-                const  Divider(color: Colors.grey,),
+                DescriptionText(text: "18%",color:const  Color(0xff73777F),),
+                const  Divider(
+                  height: 32,
+                  color: Color(0xffC3C6CF),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Total Bill",size: 16,weight: true,),
-                    TextUtil(text: "Rs.12,300",size: 16,weight: true,),
+                    TitleText(text: "Total Bill"),
+                    TitleText(text: "Rs.12,300",),
                   ],
                 ),
-                const   SizedBox(height:20,),
-                TextUtil(text: "Payment summary",size: 16,weight: true,),
-                const SizedBox(height: 15,),
+                const   SizedBox(height:24,),
+                TitleText(text: "Payment summary",),
+                const SizedBox(height: 16,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "FuelGenie Credits",size: 15,),
-                    TextUtil(text: "Rs.12,000",size: 13,),
+                    DescriptionText(text: "FuelGenie Credits",color:const   Color(0xff1A1C1E),),
+                    DescriptionText(text: "Rs.12,000",),
                   ],
-                ), const SizedBox(height: 5,),
+                ), const SizedBox(height: 8,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Online payment",size: 15,),
-                    TextUtil(text: "Rs.300",size: 13,),
+                    DescriptionText(text: "Online payment",color:const   Color(0xff1A1C1E),),
+                    DescriptionText(text: "Rs.300",),
                   ],
-                ), const SizedBox(height: 5,),
-                const  Divider(color: Colors.grey,),
+                ),
+                const  Divider(
+                  height: 32,
+                  color: Color(0xffC3C6CF),),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
                   children: [
-                    TextUtil(text: "Total Paid",size: 16,weight: true,),
-                    TextUtil(text: "Rs.00",size: 16,weight: true,),
+                    TitleText(text: "Total Paid",),
+                    TitleText(text: "Rs.00",),
                   ],
                 ),
               const   SizedBox(height: 20,),
